@@ -179,23 +179,10 @@ a {
 .hero-aside {
   display: grid;
   gap: 1rem;
+  align-content: center;
 }
 
-.hero-photo {
-  margin: 0;
-  padding: 0.45rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: calc(var(--radius) + 6px);
-  box-shadow: var(--shadow);
-}
-
-.hero-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--radius);
-}
+/* Profile photo removed — stats card only in hero aside */
 
 .eyebrow {
   margin: 0 0 1rem;
