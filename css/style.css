@@ -1,11 +1,11 @@
 :root {
-  --bg: #f0f2f4;
+  --bg: #f1f3f4;
   --bg-dark: #111110;
   --surface: #ffffff;
   --text: #14181c;
-  --text-muted: #4f5963;
-  --accent: #c45c26;
-  --accent-soft: #e4eaef;
+  --text-muted: #4a545e;
+  --accent: #c2612e;
+  --accent-soft: #e6ecef;
   --border: #d5dbe1;
   --shadow: 0 24px 60px rgba(20, 24, 28, 0.08);
   --radius: 18px;
@@ -39,6 +39,42 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 2000;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 .container {
@@ -123,7 +159,7 @@ a {
 }
 
 .hero .eyebrow {
-  color: #e8a574;
+  color: #e8a878;
 }
 
 .hero .btn-primary {
@@ -132,7 +168,7 @@ a {
 }
 
 .hero .btn-primary:hover {
-  background: #a84e1f;
+  background: #a34e24;
 }
 
 .hero .btn-ghost {

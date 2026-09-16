@@ -22,6 +22,15 @@ if (navToggle && navLinks) {
       navToggle.setAttribute("aria-label", "Open menu");
     });
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navLinks.classList.contains("open")) {
+      navLinks.classList.remove("open");
+      navToggle.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open menu");
+    }
+  });
 }
 
 document.querySelectorAll('a[href="#site-top"]').forEach((link) => {
